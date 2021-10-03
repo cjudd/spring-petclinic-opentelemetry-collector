@@ -3,6 +3,8 @@ receivers:
     protocols:
       grpc:
       http:
+        cors_allowed_origins:
+          - http://*
 
 processors:
   batch:

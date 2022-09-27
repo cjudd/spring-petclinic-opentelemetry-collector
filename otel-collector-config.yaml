@@ -3,8 +3,6 @@ receivers:
     protocols:
       grpc:
       http:
-        cors_allowed_origins:
-          - http://*
 
 processors:
   batch:
@@ -24,7 +22,8 @@ exporters:
 
   jaeger:
     endpoint: jaeger-all-in-one:14250
-    insecure: true
+    tls:
+      insecure: true
 
 extensions:
   health_check:
